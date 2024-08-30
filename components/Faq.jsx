@@ -13,10 +13,11 @@ const Faq = () => {
     { question: "Question 1", answer: "Answer to question 1" },
     { question: "Question 2", answer: "Answer to question 2" },
     { question: "Question 3", answer: "Answer to question 3" },
+    { question: "Question 4", answer: "Answer to question 4" },
   ];
 
   return (
-    <div className="pb-40 text-center max-w-[900px] mx-auto">
+    <div className="pb-40 text-center max-w-[900px] mx-auto mt-5" id="faq">
       <h1 className="text-[40px] mb-8 font-medium">
         Frequently Asked Questions
       </h1>

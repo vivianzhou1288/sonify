@@ -20,9 +20,10 @@ const Hero = () => {
         </p>
         <div className="flex justify-center mb-10 md:mb-0 md:justify-start gap-2 items-center">
           <input
+            placeholder="Your Email Address..."
             required
             type="email"
-            className="bg-[rgba(165,_122,_255,_0.05)] outline-none border border-[#4C3177] rounded-md py-2 px-4 max-w-[300px] w-full"
+            className="bg-[rgba(165,_122,_255,_0.05)] outline-none border border-[#4C3177] rounded-md py-3 px-4 max-w-[300px] w-full text-sm"
           />
           <a
             href=""

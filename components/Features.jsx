@@ -4,7 +4,7 @@ import mic from "@/public/mic.png";
 
 const Features = () => {
   return (
-    <div className="pb-40 text-center">
+    <div className="pb-40 text-center mt-5" id="features">
       <h1 className="text-[40px] mb-8 font-medium">
         Elevate Your Playlist <span className="gradient">Using Sonify</span>
       </h1>

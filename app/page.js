@@ -5,6 +5,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Features from "@/components/Features";
 import Faq from "@/components/Faq";
+import Join from "@/components/Join";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <About />
         <Features />
         <Faq />
+        <Join />
+        <Footer />
       </div>
     </div>
   );

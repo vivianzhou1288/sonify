@@ -10,16 +10,20 @@ const Header = () => {
         <h2 className="text-[20px] sm:text-[26px]">Sonify</h2>
       </div>
       <div className="flex gap-7">
-        <a className="text-[15px] font-light" href="#">
+        <a className="text-[15px] font-light" href="#about">
           About
         </a>
-        <a className="text-[15px] font-light" href="#">
+        <a className="text-[15px] font-light" href="#features">
           Features
         </a>
-        <a className="text-[15px] font-light" href="#">
+        <a className="text-[15px] font-light" href="#faq">
           FAQ
         </a>
-        <a className="text-[15px] font-light" href="#">
+        <a
+          className="text-[15px] font-light"
+          href="https://github.com/vivianzhou1288/sonify"
+          target="_blank"
+        >
           Github
         </a>
       </div>
