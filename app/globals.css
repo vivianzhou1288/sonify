@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gradient {
+  background: linear-gradient(to right, #6e649f, #9c8ee1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-bg {
+  background: linear-gradient(to top, #520c9833, #272728 70%);
+  width: 100%;
+  height: 100%;
+}
