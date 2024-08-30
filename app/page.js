@@ -12,7 +12,11 @@ export default function Home() {
   return (
     <div className=" w-full overflow-hidden">
       <div className="relative max-w-[1280px] mx-auto px-7 sm:px-14">
-        <Image className="absolute right-[-220px] z-[-10]" src={Blur1} alt="" />
+        <Image
+          className="absolute right-[-160px] sm:right-[-220px] z-[-10]"
+          src={Blur1}
+          alt=""
+        />
         <Header />
         <Hero />
         <About />

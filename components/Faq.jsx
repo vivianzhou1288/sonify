@@ -18,7 +18,7 @@ const Faq = () => {
 
   return (
     <div className="pb-40 text-center max-w-[900px] mx-auto mt-5" id="faq">
-      <h1 className="text-[40px] mb-8 font-medium">
+      <h1 className="text-[30px] sm:text-[40px] mb-8 font-medium">
         Frequently Asked Questions
       </h1>
       <div className="text-left">

@@ -4,13 +4,13 @@ const Footer = () => {
   return (
     <div className="footer pt-6 pb-10 flex justify-between">
       <div className="flex gap-5">
-        <a className="text-[15px] font-light" href="#">
+        <a className="text-[15px] font-light" href="#about">
           About
         </a>
-        <a className="text-[15px] font-light" href="#">
+        <a className="text-[15px] font-light" href="#features">
           Features
         </a>
-        <a className="text-[15px] font-light" href="#">
+        <a className="text-[15px] font-light" href="#faq">
           FAQ
         </a>
       </div>
