@@ -12,7 +12,7 @@ const Hero = () => {
             PERSONALIZED
           </span>
           <br />
-          PLAYLIST RECOMMENDATIONS
+          SONG RECOMMENDATIONS
         </h1>
         <p className="max-w-[600px] mt-[10px] mb-[30px] font-light text-sm md:text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
