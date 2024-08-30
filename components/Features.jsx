@@ -8,7 +8,7 @@ const Features = () => {
       <h1 className="text-[40px] mb-8 font-medium">
         Elevate Your Playlist <span className="gradient">Using Sonify</span>
       </h1>
-      <div className="flex flex-col md:flex-row gap-5 justify-center md:justify-around max-w-[1000px] mx-auto">
+      <div className="flex flex-col md:flex-row gap-5 justify-center md:justify-around max-w-[1200px] mx-auto">
         <div className="relative w-full md:w-[240px] rounded-[20px] overflow-hidden">
           <div className="card-bg p-6 text-left">
             <Image src={mic} alt="Microphone" width={30} height={30} />
