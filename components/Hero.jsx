@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import HeadphoneImg from "@/public/mic-pic.png";
 
@@ -12,13 +12,13 @@ const Hero = () => {
       const response = await fetch("/api/collect-emails", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({email}),
+        body: JSON.stringify({ email }),
       });
 
       if (!response.ok) {
         const errorText = await response.text();
         console.error("Server error:", errorText);
-        setError(errorText); 
+        setError(errorText);
         return;
       }
 
@@ -26,9 +26,9 @@ const Hero = () => {
       console.log("Added to waitlist successfully", data);
     } catch (error) {
       console.error("Sign-in error:", error);
-      setError("An unexpected error occurred."); 
+      setError("An unexpected error occurred.");
     }
-  }
+  };
   return (
     <div className="text-center md:text-left md:flex items-center justify-center md:justify-between gap-5 font-medium">
       <div className="">
@@ -50,10 +50,10 @@ const Hero = () => {
             placeholder="Your Email Address..."
             required
             type="email"
-            className="bg-[rgba(165,_122,_255,_0.05)] outline-none border border-[#4C3177] rounded-md py-3 px-4 max-w-[300px] w-full text-sm"
+            className="bg-[rgba(165,_122,_255,_0.05)] outline-none border border-[#4C3177] rounded-md py-3 px-4 max-w-[250px] w-full text-sm"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <div onClick = {handleWaitlist}>
+          <div onClick={handleWaitlist}>
             <a
               href=""
               className="shrink-0 bg-[#272728] py-3 px-4 rounded-md font-light"
