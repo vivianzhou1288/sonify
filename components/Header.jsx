@@ -9,7 +9,7 @@ const Header = () => {
         <Image src={logo} alt="" width={30} height={30} />
         <h2 className="text-[20px] sm:text-[26px]">Sonify</h2>
       </div>
-      <div className="flex gap-7">
+      <div className="hidden sm:flex gap-7">
         <a className="text-[15px] font-light" href="#about">
           About
         </a>
