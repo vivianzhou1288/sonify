@@ -6,8 +6,15 @@ import HeadphoneImg from "@/public/mic-pic.png";
 const Hero = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
 
-  const handleWaitlist = async () => {
+  const handleWaitlist = async (e) => {
+    e.preventDefault();
+    if (!email) {
+      setStatusMessage("Please enter a valid email address.");
+      return;
+    }
+    
     try {
       const response = await fetch("/api/collect-emails", {
         method: "POST",
@@ -15,18 +22,25 @@ const Hero = () => {
         body: JSON.stringify({ email }),
       });
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error("Server error:", errorText);
-        setError(errorText);
-        return;
-      }
+      // if (!response.ok) {
+      //   const errorText = await response.text();
+      //   console.error("Server error:", errorText);
+      //   setError(errorText);
+      //   return;
+      // }
 
       const data = await response.json();
+      console.log(data);
+      if (response.ok) {
+        setStatusMessage("Email added successfully!");
+        setEmail("");
+      } else {
+        setStatusMessage(result.error || "Failed to add email.");
+      }
       console.log("Added to waitlist successfully", data);
     } catch (error) {
-      console.error("Sign-in error:", error);
-      setError("An unexpected error occurred.");
+      console.error("Error submitting email:", error);
+      setStatusMessage("An error occurred. Please try again later.");
     }
   };
   return (
@@ -62,6 +76,9 @@ const Hero = () => {
             </a>
           </div>
         </div>
+        <div>
+            {statusMessage && <p className="mt-4 text-sm">{statusMessage}</p>}{" "}
+          </div>
       </div>
       <div className="flex justify-center">
         <Image src={HeadphoneImg} alt="" />
