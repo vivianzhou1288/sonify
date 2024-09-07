@@ -7,24 +7,32 @@ import Features from "@/components/Features";
 import Faq from "@/components/Faq";
 import Join from "@/components/Join";
 import Footer from "@/components/Footer";
+import Dashboard from "@/components/dashboardComponents/Dashboard";
 
 export default function Home() {
+  const user = true;
   return (
-    <div className=" w-full overflow-hidden">
-      <div className="relative max-w-[1280px] mx-auto px-7 sm:px-14">
-        <Image
-          className="absolute right-[-160px] sm:right-[-220px] z-[-10]"
-          src={Blur1}
-          alt=""
-        />
-        <Header />
-        <Hero />
-        <About />
-        <Features />
-        <Faq />
-        <Join />
-        <Footer />
-      </div>
-    </div>
+    <>
+      {user ? (
+        <Dashboard />
+      ) : (
+        <div className=" w-full overflow-hidden">
+          <div className="relative max-w-[1280px] mx-auto px-7 sm:px-14">
+            <Image
+              className="absolute right-[-160px] sm:right-[-220px] z-[-10]"
+              src={Blur1}
+              alt=""
+            />
+            <Header />
+            <Hero />
+            <About />
+            <Features />
+            <Faq />
+            <Join />
+            <Footer />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
