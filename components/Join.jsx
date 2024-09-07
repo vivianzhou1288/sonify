@@ -14,7 +14,7 @@ const Join = () => {
     }
 
     try {
-      const response = await fetch("/api/collect-email", {
+      const response = await fetch("/api/collect-emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -23,6 +23,7 @@ const Join = () => {
       });
 
       const result = await response.json();
+      console.log(result)
 
       if (response.ok) {
         setStatusMessage("Email added successfully!");
@@ -46,7 +47,6 @@ const Join = () => {
         email below
       </p>
       <form
-        onSubmit={handleSubmit}
         className="flex justify-center mb-10 md:mb-0 gap-2 mt-10 items-center"
       >
         <input
@@ -60,6 +60,7 @@ const Join = () => {
         <button
           type="submit"
           className="shrink-0 bg-[#272728] py-3 px-4 rounded-md font-light"
+          onClick={handleSubmit}
         >
           Join Waitlist
         </button>
